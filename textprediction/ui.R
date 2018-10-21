@@ -9,6 +9,7 @@ shinyUI(fluidPage(
   
   tabsetPanel(
           tabPanel("Prediction App",
+                   h3("SwiftKey-like Prediction App"),
                    sidebarLayout(
                            sidebarPanel(
                                    textInput("inputstring",
@@ -43,21 +44,17 @@ shinyUI(fluidPage(
                    p("If say, for example, there are matches in the 4-gram table, but there is only 1 instance of the first 3 words
                      in the 4-gram, the other two predicted words are randomly chosen from the top 10 occurring words in the
                      corpus."),
-                   p("All of my code is shared on my github repository for this project at ")
-                   )
-  # ),
-  # 
-  # sidebarLayout(
-  #   sidebarPanel(
-  #      textInput("inputstring",
-  #                "Enter string to predict off of:",
-  #                value = 'welcome to the')
-  #   ),
-  #   
-  #   mainPanel(
-  #      textOutput("w1"),
-  #      textOutput("w2"),
-  #      textOutput("w3")
-  #   )
+                   p("All of my code is shared on my github repository for this project at:"),
+                   a("My Github Repository",
+                     href='https://github.com/athanasios8193/coursera_capstone'),
+                   p(""),
+                   p("My 'prediction.R' file in the 'textprediction' folder gives a better explanation of how the
+                     'model' actually works.")
+                   ),
+          tabPanel("Acknowledgements",
+                   h3("Acknowledgements"),
+                   p("Many thanks to Drs. Roger Peng, Brian Caffo, and Jeff Leek for making this Specialization possible.
+                     I have learned so much in this course and I am so grateful for all the work they put into
+                     creating this course."))
   )
 ))
