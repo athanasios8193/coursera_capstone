@@ -155,22 +155,3 @@ rm(sum4)
 
 # SAVES THE DATA TABLES TO A .RDATA FILE SO THAT I DON'T HAVE TO RUN THIS CODE AGAIN TO SAVE A LOT OF TIME
 save.image('./dtables.RData')
-
-## CREATE TRAINING AND TESTING SETS
-# set.seed(123)
-# 
-# sample1 <- sample.split(dt1$w1, SplitRatio = 0.7)
-# train1 <- subset(dt1, sample1==TRUE)
-# test1 <- subset(dt1, sample1==FALSE)
-# 
-# sample2 <- sample.split(dt2$w2, SplitRatio = 0.7)
-# train2 <- subset(dt2, sample2==TRUE)
-# test2 <- subset(dt2, sample2==FALSE)
-# 
-# sample3 <- sample.split(dt3$w3, SplitRatio = 0.7)
-# train3 <- subset(dt3, sample3==TRUE)
-# test3 <- subset(dt3, sample3==FALSE)
-# 
-# sample4 <- sample.split(dt4$w2, SplitRatio = 0.7)
-# train4 <- subset(dt4, sample4==TRUE)
-# test4 <- subset(dt4, sample4==FALSE)
